@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MapInshot - Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Link to AOS library for scroll animations -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">
+            <div class="logo" data-aos="fade-down">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube Logo">
                 <span>MapInshot</span>
             </div>
@@ -23,26 +27,34 @@
     
     <section class="hero">
         <div class="hero-content">
-            <h1>Welcome to <span>@MapInshot</span></h1>
-            <p>Subscribe now to explore, learn, and be inspired through engaging knowledge-driven content.</p>
-            <a href="https://www.youtube.com/@prayag.joshii" target="_blank" class="youtube-button">Subscribe on YouTube</a>
+            <h1 data-aos="zoom-in">Welcome to <span>@MapInshot</span></h1>
+            <p data-aos="fade-up" data-aos-delay="200">
+                Subscribe now to explore, learn, and be inspired through engaging knowledge-driven content.
+            </p>
+            <a href="https://www.youtube.com/@prayag.joshii" target="_blank" class="youtube-button" data-aos="fade-up" data-aos-delay="400">Subscribe on YouTube</a>
+            <br>
+            <!-- "See More" button linking to About Section -->
+            <a href="#about" class="see-more-button" data-aos="fade-up" data-aos-delay="600">See More</a>
         </div>
     </section>
     
-    
     <section id="about" class="about">
-    <h2>मैं <span class="highlighted-name">Prayag Joshi</span>,</h2>
-    <h3><p class="intro"> यूट्यूब प्ले बटन को साक्षी मानकर ये शपथ लेता हूँ कि मैं अपने चैनल पर ज्ञान, मस्ती और सच्चाई से भरे वीडियो बनाऊँगा |  मैं 321 सब्सक्राइबर्स के भरोसे को कभी टूटने नहीं दूँगा, और आगे बढ़ते हुए ये संख्या लाखों तक पहुँचाऊँगा!
-        और आप सभी भारत की जनता को नेताओं की तरह निराश नहीं करूँगा!</p></h3>
-    <p>taking the YouTube Play Button as a witness, swear that I will create videos filled with knowledge, fun, and truth on my channel. I will never break the trust of my 321 subscribers, and as I move forward, I will take this number to millions!
-        And I will never disappoint you, the people of India, like the politicians do!</p>
-</section>
-
-    
+        <h2 data-aos="fade-right">मैं <span class="highlighted-name">Prayag Joshi</span>,</h2>
+        <h3>
+            <p class="intro" data-aos="fade-left">
+                यूट्यूब प्ले बटन को साक्षी मानकर ये शपथ लेता हूँ कि मैं अपने चैनल पर ज्ञान, मस्ती और सच्चाई से भरे वीडियो बनाऊँगा | मैं 321 सब्सक्राइबर्स के भरोसे को कभी टूटने नहीं दूँगा, और आगे बढ़ते हुए ये संख्या लाखों तक पहुँचाऊँगा!
+                और आप सभी भारत की जनता को नेताओं की तरह निराश नहीं करूँगा!
+            </p>
+        </h3>
+        <p data-aos="fade-up">
+            Taking the YouTube Play Button as a witness, swear that I will create videos filled with knowledge, fun, and truth on my channel. I will never break the trust of my 321 subscribers, and as I move forward, I will take this number to millions!
+            And I will never disappoint you, the people of India, like the politicians do!
+        </p>
+    </section>
     
     <section id="videos" class="videos">
-        <h2>Featured Videos</h2>
-        <div class="video-grid">
+        <h2 data-aos="zoom-in">Featured Videos</h2>
+        <div class="video-grid" data-aos="fade-up">
             <div class="video-card">
                 <a href="https://www.youtube.com/shorts/Omk1BB81FF4" target="_blank">
                     <img src="2.jpg" alt="Video Thumbnail">
@@ -67,26 +79,24 @@
                     <h3>Kaise kam krti he ANI PTI & UNI</h3>
                 </a>
             </div>
-            
         </div>
     </section>
     
-    
     <section id="contact" class="contact">
-        <h2>Contact Me</h2>
-        <p>Let's connect on social media or send me an email!</p>
+        <h2 data-aos="fade-down">Contact Me</h2>
+        <p data-aos="fade-up">Let's connect on social media or send me an email!</p>
         <div class="contact-cards">
-            <div class="contact-card">
+            <div class="contact-card" data-aos="zoom-in">
                 <i class="fab fa-instagram"></i>
                 <h3>Instagram</h3>
                 <a href="https://instagram.com/mapinshot" target="_blank">@mapinshot</a>
             </div>
-            <div class="contact-card">
+            <div class="contact-card" data-aos="zoom-in" data-aos-delay="200">
                 <i class="fab fa-twitter"></i>
                 <h3>Twitter</h3>
                 <a href="https://twitter.com/mapinshot" target="_blank">@mapinshot</a>
             </div>
-            <div class="contact-card">
+            <div class="contact-card" data-aos="zoom-in" data-aos-delay="400">
                 <i class="fas fa-envelope"></i>
                 <h3>Email</h3>
                 <a href="mailto:mapinshot@example.com">prayaygjoshi@gmail.com</a>
@@ -94,9 +104,17 @@
         </div>
     </section>
     
-    
     <footer>
         <p>&copy; 2024 MapInshot. All rights reserved.</p>
+        <p><b>Made with <span style="color: red;">&#10084;&#65039;</span> by Udit</b></p>
     </footer>
+    
+
+    <!-- AOS library -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init();
+    </script>
 </body>
 </html>
