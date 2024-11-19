@@ -1,0 +1,320 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+a {
+    text-decoration: none;
+    color: #ff0000; /* YouTube red */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+a:hover {
+    color: #ff4081; /* Pinkish red for hover effect */
+    text-shadow: #121212;
+}
+
+header {
+    background: #1e1e1e;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff0000; /* YouTube red */
+}
+
+.logo img {
+    height: 30px;
+    margin-right: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+    position: relative;
+}
+
+.nav-links a {
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.nav-links a:hover {
+    transform: translateY(-3px); /* Slight lift on hover */
+}
+
+/* Underline Animation */
+.nav-links a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: #ff0000; /* YouTube red underline */
+    transition: width 0.3s ease, left 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-links a:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full screen height */
+    background: linear-gradient(135deg, #1a1a1a, #121212);
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+    color: #f0f0f0;
+}
+
+.hero h1 {
+    font-size: 4rem; /* Large title font size */
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.hero h1 span {
+    color: #ff0000; /* YouTube red */
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.5rem; /* Larger font for description */
+    margin-bottom: 30px;
+    color: #cccccc;
+}
+
+.youtube-button {
+    font-size: 1.5rem;
+    padding: 15px 30px;
+    background: #ff0000; /* YouTube red */
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.youtube-button:hover {
+    background: #3b3737; /* Grey color on hover */
+    color: #ffffff; /* Ensure text color stays white */
+    transform: scale(1.05); /* Slight scaling on hover */
+}
+
+
+
+
+
+/* Section Styles */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about, .contact {
+    background: #1a1a1a;
+}
+
+.videos .video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.video-card {
+    background: #1e1e1e;
+    padding: 32px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.video-card:hover {
+    transform: scale(1.05);
+}
+
+.video-card img {
+    width: 100%;
+    height: fit-content;
+    border-radius: 8px;
+}
+
+.video-card h3 {
+    margin: 10px 0 0;
+}
+
+
+/* About Section */
+.about {
+    padding: 60px 20px;
+    text-align: center;
+    background: #121212;
+    color: #f0f0f0;
+    border-bottom: 2px solid #ff0000; /* Red line for a YouTube feel */
+}
+
+/* Heading Styling */
+.about h2 {
+    font-size: 2.8rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Highlighted Name (Red Color) */
+.highlighted-name {
+    color: #ff0000; /* YouTube red */
+}
+
+/* Intro Text */
+.intro {
+    font-size: 1.4rem;
+    color: #ff0000;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    line-height: 1.5;
+    transition: transform 0.3s ease;
+    font-style: italic;
+}
+
+/* Hover effect on intro text */
+.intro:hover {
+    transform: scale(1.1);
+    color: #ff4081; /* Change to a pinkish red on hover */
+}
+
+/* Main Content Text */
+.about p {
+    font-size: 1.2rem;
+    color: #b0b0b0;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about h2 {
+        font-size: 2.2rem; /* Smaller heading for mobile */
+    }
+
+    .intro {
+        font-size: 1.2rem; /* Adjust intro font size */
+    }
+
+    .about p {
+        font-size: 1rem; /* Smaller text for better readability on small screens */
+    }
+}
+
+/* Contact Section */
+.contact {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #1a1a1a, #121212);
+    color: #f0f0f0;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #cccccc;
+}
+
+.contact-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contact-card {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.5);
+}
+
+.contact-card i {
+    font-size: 2.5rem;
+    color: #ff0000; /* YouTube red */
+    margin-bottom: 15px;
+}
+
+.contact-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #f0f0f0;
+}
+
+.contact-card a {
+    font-size: 1.1rem;
+    color: #ff0000; /* YouTube red */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-card a:hover {
+    color: #ff4081; /* Pinkish red */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #1e1e1e;
+    color: #888;
+}
