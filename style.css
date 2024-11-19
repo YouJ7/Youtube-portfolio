@@ -14,9 +14,30 @@ a {
 
 a:hover {
     color: #ff4081; /* Pinkish red for hover effect */
-    text-shadow: #121212;
 }
 
+.see-more-button {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    background: #ffffff;
+    color: #ff0000;
+    border: 2px solid #ff0000;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.see-more-button:hover {
+    background: #ff0000;
+    color: #ffffff;
+}
+
+
+/* Header and Navigation */
 header {
     background: #1e1e1e;
     padding: 10px 20px;
@@ -37,7 +58,7 @@ nav {
     align-items: center;
     font-size: 24px;
     font-weight: bold;
-    color: #ff0000; /* YouTube red */
+    color: #ff0000;
 }
 
 .logo img {
@@ -52,36 +73,12 @@ nav {
 
 .nav-links li {
     margin: 0 15px;
-    position: relative;
 }
 
 .nav-links a {
     font-size: 1.2rem;
     padding: 10px 15px;
     border-radius: 5px;
-    position: relative;
-}
-
-.nav-links a:hover {
-    transform: translateY(-3px); /* Slight lift on hover */
-}
-
-/* Underline Animation */
-.nav-links a::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 0;
-    height: 3px;
-    background: #ff0000; /* YouTube red underline */
-    transition: width 0.3s ease, left 0.3s ease;
-    transform: translateX(-50%);
-}
-
-.nav-links a:hover::before {
-    width: 100%;
-    left: 0;
 }
 
 /* Hero Section */
@@ -89,7 +86,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Full screen height */
+    height: 100vh;
     background: linear-gradient(135deg, #1a1a1a, #121212);
     text-align: center;
     padding: 0 20px;
@@ -101,18 +98,18 @@ nav {
 }
 
 .hero h1 {
-    font-size: 4rem; /* Large title font size */
+    font-size: 4rem;
     margin-bottom: 20px;
     color: #ffffff;
 }
 
 .hero h1 span {
-    color: #ff0000; /* YouTube red */
+    color: #ff0000;
     font-weight: bold;
 }
 
 .hero p {
-    font-size: 1.5rem; /* Larger font for description */
+    font-size: 1.5rem;
     margin-bottom: 30px;
     color: #cccccc;
 }
@@ -120,25 +117,19 @@ nav {
 .youtube-button {
     font-size: 1.5rem;
     padding: 15px 30px;
-    background: #ff0000; /* YouTube red */
+    background: #ff0000;
     color: #ffffff;
     text-transform: uppercase;
     font-weight: bold;
     border-radius: 50px;
-    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
     border: none;
     cursor: pointer;
 }
 
 .youtube-button:hover {
-    background: #3b3737; /* Grey color on hover */
-    color: #ffffff; /* Ensure text color stays white */
-    transform: scale(1.05); /* Slight scaling on hover */
+    background: #3b3737;
+    color: #ffffff;
 }
-
-
-
-
 
 /* Section Styles */
 section {
@@ -178,17 +169,15 @@ section {
     margin: 10px 0 0;
 }
 
-
 /* About Section */
 .about {
     padding: 60px 20px;
     text-align: center;
     background: #121212;
     color: #f0f0f0;
-    border-bottom: 2px solid #ff0000; /* Red line for a YouTube feel */
+    border-bottom: 2px solid #ff0000;
 }
 
-/* Heading Styling */
 .about h2 {
     font-size: 2.8rem;
     color: #ffffff;
@@ -198,52 +187,24 @@ section {
     text-transform: uppercase;
 }
 
-/* Highlighted Name (Red Color) */
 .highlighted-name {
-    color: #ff0000; /* YouTube red */
+    color: #ff0000;
 }
 
-/* Intro Text */
 .intro {
     font-size: 1.4rem;
     color: #ff0000;
     font-weight: 600;
     margin-bottom: 30px;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    line-height: 1.5;
-    transition: transform 0.3s ease;
     font-style: italic;
 }
 
-/* Hover effect on intro text */
-.intro:hover {
-    transform: scale(1.1);
-    color: #ff4081; /* Change to a pinkish red on hover */
-}
-
-/* Main Content Text */
 .about p {
     font-size: 1.2rem;
     color: #b0b0b0;
     max-width: 800px;
     margin: 0 auto;
     line-height: 1.6;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .about h2 {
-        font-size: 2.2rem; /* Smaller heading for mobile */
-    }
-
-    .intro {
-        font-size: 1.2rem; /* Adjust intro font size */
-    }
-
-    .about p {
-        font-size: 1rem; /* Smaller text for better readability on small screens */
-    }
 }
 
 /* Contact Section */
@@ -290,7 +251,7 @@ section {
 
 .contact-card i {
     font-size: 2.5rem;
-    color: #ff0000; /* YouTube red */
+    color: #ff0000;
     margin-bottom: 15px;
 }
 
@@ -302,19 +263,93 @@ section {
 
 .contact-card a {
     font-size: 1.1rem;
-    color: #ff0000; /* YouTube red */
+    color: #ff0000;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .contact-card a:hover {
-    color: #ff4081; /* Pinkish red */
+    color: #ff4081;
 }
 
-/* Footer */
 footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #161413, #383331);
+    color: white;
     text-align: center;
-    padding: 20px 0;
-    background: #1e1e1e;
-    color: #888;
+    padding: 10px 0;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ensures it's above other elements */
+}
+
+footer p {
+    margin: 5px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+footer span {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .hamburger div {
+        width: 25px;
+        height: 3px;
+        background-color: #fff;
+        margin: 4px 0;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .youtube-button {
+        font-size: 1.2rem;
+        padding: 12px 20px;
+    }
+
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-cards {
+        flex-direction: column;
+    }
 }
